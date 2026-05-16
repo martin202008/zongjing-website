@@ -1,8 +1,9 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '@/lib/LanguageContext'
-import { Target, Users, Award, CheckCircle, TrendingUp, Monitor, Wrench, Calculator, Briefcase, Cpu } from 'lucide-react'
+import { Target, Users, Award, CheckCircle, TrendingUp, Monitor, Wrench, Calculator, Briefcase, Cpu, ArrowRight } from 'lucide-react'
 
 export default function AboutPage() {
   const { lang, t } = useLanguage()
@@ -315,6 +316,43 @@ export default function AboutPage() {
           </li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+{/* CTA Section */}
+<section className="py-20" style={{ background: 'linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 100%)' }}>
+  <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl font-bold mb-4" style={{ color: '#0F172A' }}>
+      {isZh ? '开启数字化转型之旅' : 'Start Your Digital Transformation'}
+    </h2>
+    <p className="text-lg mb-8" style={{ color: '#475569' }}>
+      {isZh ? '携手宗靖商管，共建智慧商业新生态' : 'Join us to build a smarter commercial ecosystem'}
+    </p>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <Link
+        href="/system"
+        className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm text-white shadow-lg transition-all hover:-translate-y-0.5 hover:opacity-90"
+        style={{ background: '#1E40AF' }}
+      >
+        进入招赢系统
+        <ArrowRight className="w-4 h-4" />
+      </Link>
+      <Link
+        href="/digital"
+        className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-white"
+        style={{ borderColor: '#1E40AF', color: '#1E40AF' }}
+      >
+        了解更多数智化成果
+        <ArrowRight className="w-4 h-4" />
+      </Link>
+      <a
+        href="tel:0512-66188818"
+        className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm border-2 transition-all hover:bg-white"
+        style={{ borderColor: '#E2E8F0', color: '#0F172A' }}
+      >
+        电话咨询：0512-66188818
+      </a>
     </div>
   </div>
 </section>
