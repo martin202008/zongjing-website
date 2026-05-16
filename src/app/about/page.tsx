@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useLanguage } from '@/lib/LanguageContext'
-import { Target, Users, Award, CheckCircle, TrendingUp, Monitor, Wrench, Calculator, Briefcase } from 'lucide-react'
+import { Target, Users, Award, CheckCircle, TrendingUp, Monitor, Wrench, Calculator, Briefcase, Cpu } from 'lucide-react'
 
 export default function AboutPage() {
   const { lang, t } = useLanguage()
@@ -150,172 +150,174 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Departments Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-4" style={{ color: '#0F172A' }}>
-            {isZh ? '组织架构' : 'Organization Structure'}
-          </h2>
-          <p className="text-center mb-16" style={{ color: '#475569' }}>
-            {isZh ? '五大核心部门，协同赋能商业地产数字化运营' : 'Five core departments working together to enable digital commercial real estate operations'}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* 招商营运部 */}
-            <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#EEF2FF' }}>
-                <TrendingUp className="w-8 h-8" style={{ color: '#1E40AF' }} />
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '招商营运部' : 'Investment & Operations Dept.'}</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '商业定位研策' : 'Business Positioning & Research'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '业态规划定位' : 'Format Planning & Positioning'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '动线规划设计' : 'Traffic Flow Design'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '招商策划推广' : 'Investment Planning & Promotion'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '商业运管输出' : 'Commercial Operations Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '商户经营辅导' : 'Merchant Business Guidance'}</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* 数字营销部 */}
-            <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#F0FDF4' }}>
-                <Monitor className="w-8 h-8" style={{ color: '#16A34A' }} />
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '数字营销部' : 'Digital Marketing Dept.'}</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '会员招募运营' : 'Member Recruitment & Operations'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '社群运营推广' : 'Community Operations & Promotion'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '内容创作运营' : 'Content Creation & Operations'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '品牌营销推广' : 'Brand Marketing & Promotion'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '智能数字系统' : 'Smart Digital Systems'}</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* 工程物管部 */}
-            <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#FFF7ED' }}>
-                <Wrench className="w-8 h-8" style={{ color: '#EA580C' }} />
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '工程物管部' : 'Engineering & Property Dept.'}</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '商业物业服务' : 'Commercial Property Services'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '工程维保服务' : 'Engineering Maintenance Services'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '安全管理服务' : 'Safety Management Services'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '绿化环境服务' : 'Landscaping & Environment Services'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '商业后勤服务' : 'Commercial Logistics Services'}</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* 财务部 */}
-            <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#FEF2F2' }}>
-                <Calculator className="w-8 h-8" style={{ color: '#DC2626' }} />
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '财务部' : 'Finance Dept.'}</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '商业运营分析' : 'Commercial Operations Analysis'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '资产管理' : 'Asset Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '全面预算管理' : 'Comprehensive Budget Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '资金管理' : 'Fund Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '财务核算' : 'Financial Accounting'}</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* 综合部 */}
-            <div className="p-8 rounded-2xl md:col-span-2 lg:col-span-1" style={{ border: '1px solid #E2E8F0' }}>
-              <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#F5F3FF' }}>
-                <Briefcase className="w-8 h-8" style={{ color: '#7C3AED' }} />
-              </div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '综合部' : 'Administration Dept.'}</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '人力资源管理' : 'Human Resources Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '行政后勤管理' : 'Administrative & Logistics Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '企业文化管理' : 'Corporate Culture Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '法律合规管理' : 'Legal & Compliance Management'}</span>
-                </li>
-                <li className="flex items-start gap-2" style={{ color: '#475569' }}>
-                  <span style={{ color: '#EA580C' }}>•</span>
-                  <span>{isZh ? '信息档案管理' : 'Information & Records Management'}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+      {/* Team Capabilities */}
+<section className="py-20 bg-white">
+  <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-4" style={{ color: '#0F172A' }}>
+      {isZh ? '团队能力' : 'Team Capabilities'}
+    </h2>
+    <p className="text-center mb-16" style={{ color: '#475569' }}>
+      {isZh ? '六大核心能力，协同赋能商业地产数字化运营' : 'Six core capabilities working together to enable digital operations'}
+    </p>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* 招商运营 */}
+      <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#EEF2FF' }}>
+          <TrendingUp className="w-8 h-8" style={{ color: '#1E40AF' }} />
         </div>
-      </section>
+        <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '招商运营' : 'Investment & Operations'}</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '商业定位研策' : 'Business Positioning'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '业态规划定位' : 'Format Planning'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '招商策划推广' : 'Investment Planning'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '商业运管输出' : 'Operations Management'}</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* 数字营销 */}
+      <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#F0FDF4' }}>
+          <Monitor className="w-8 h-8" style={{ color: '#16A34A' }} />
+        </div>
+        <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '数字营销' : 'Digital Marketing'}</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '会员招募运营' : 'Member Operations'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '社群运营推广' : 'Community Marketing'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '内容创作运营' : 'Content Creation'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '品牌营销推广' : 'Brand Marketing'}</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* 工程物管 */}
+      <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#FFF7ED' }}>
+          <Wrench className="w-8 h-8" style={{ color: '#EA580C' }} />
+        </div>
+        <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '工程物管' : 'Engineering & Property'}</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '商业物业服务' : 'Property Services'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '工程维保服务' : 'Maintenance Services'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '安全管理服务' : 'Safety Management'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '绿化环境服务' : 'Landscaping'}</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* 财务管理 */}
+      <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#FEF2F2' }}>
+          <Calculator className="w-8 h-8" style={{ color: '#DC2626' }} />
+        </div>
+        <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '财务管理' : 'Finance'}</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '商业运营分析' : 'Operations Analysis'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '资产管理' : 'Asset Management'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '全面预算管理' : 'Budget Management'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '资金管理' : 'Fund Management'}</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* 综合管理 */}
+      <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#F5F3FF' }}>
+          <Briefcase className="w-8 h-8" style={{ color: '#7C3AED' }} />
+        </div>
+        <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '综合管理' : 'Administration'}</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '人力资源管理' : 'HR Management'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '行政后勤管理' : 'Admin & Logistics'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '企业文化管理' : 'Corporate Culture'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '法律合规管理' : 'Legal Compliance'}</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* 数字化技术 */}
+      <div className="p-8 rounded-2xl" style={{ border: '1px solid #E2E8F0' }}>
+        <div className="w-16 h-16 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: '#ECFEFF' }}>
+          <Cpu className="w-8 h-8" style={{ color: '#0891B2' }} />
+        </div>
+        <h3 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>{isZh ? '数字化技术' : 'Digital Technology'}</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '系统平台开发' : 'Platform Development'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '数据分析中台' : 'Data Analytics'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? '智能营销算法' : 'AI Marketing'}</span>
+          </li>
+          <li className="flex items-start gap-2" style={{ color: '#475569' }}>
+            <span style={{ color: '#EA580C' }}>•</span>
+            <span>{isZh ? 'IoT运维集成' : 'IoT Integration'}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
     </div>
   )
 }
