@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, ArrowLeft, CheckCircle, Phone, Clock, AreaChart } from 'lucide-react'
+import { MapPin, ArrowLeft, CheckCircle, Phone, Clock, AreaChart, Users, Store } from 'lucide-react'
 
 const projects = [
   {
@@ -201,6 +201,89 @@ export default function ProjectDetailPage() {
               <span>{project.opening}</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Core Highlights */}
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <h2 className="text-2xl font-bold mb-8" style={{ color: '#0F172A' }}>核心优势</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          {/* 区位优势卡片 */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
+            <div className="relative h-40 bg-gradient-to-br" style={{ background: 'linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%)' }}>
+              <Image
+                src={`/images/projects/${project.id}/location.jpg`}
+                alt="区位优势"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <MapPin className="w-12 h-12" style={{ color: '#1E40AF' }} />
+              </div>
+            </div>
+            <div className="p-5">
+              <h3 className="font-bold mb-2" style={{ color: '#0F172A' }}>区位优势</h3>
+              <p className="text-sm" style={{ color: '#475569' }}>{project.position}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.tags.slice(0, 2).map((tag, i) => (
+                  <span key={i} className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: '#F8FAFC', color: '#64748B' }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* 客群分析卡片 */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
+            <div className="relative h-40 bg-gradient-to-br" style={{ background: 'linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%)' }}>
+              <Image
+                src={`/images/projects/${project.id}/audience.jpg`}
+                alt="客群分析"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Users className="w-12 h-12" style={{ color: '#EA580C' }} />
+              </div>
+            </div>
+            <div className="p-5">
+              <h3 className="font-bold mb-2" style={{ color: '#0F172A' }}>客群分析</h3>
+              <p className="text-sm" style={{ color: '#475569' }}>半径3公里社区居民 · 家庭消费主力</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: '#FEF2F2', color: '#DC2626' }}>家庭客群</span>
+                <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: '#F0FDF4', color: '#16A34A' }}>年轻消费</span>
+              </div>
+            </div>
+          </div>
+
+          {/* 业态组合卡片 */}
+          <div className="bg-white rounded-2xl overflow-hidden shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
+            <div className="relative h-40 bg-gradient-to-br" style={{ background: 'linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%)' }}>
+              <Image
+                src={`/images/projects/${project.id}/business.jpg`}
+                alt="业态组合"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <Store className="w-12 h-12" style={{ color: '#16A34A' }} />
+              </div>
+            </div>
+            <div className="p-5">
+              <h3 className="font-bold mb-2" style={{ color: '#0F172A' }}>业态组合</h3>
+              <p className="text-sm" style={{ color: '#475569' }}>{project.floors}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {project.features.slice(0, 2).map((f, i) => (
+                  <span key={i} className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: '#EEF2FF', color: '#1E40AF' }}>
+                    {f}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
