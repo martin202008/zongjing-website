@@ -11,14 +11,29 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="relative py-24 md:py-32" style={{ backgroundColor: '#1E40AF' }}>
-        <div className="absolute inset-0 opacity-20">
-          <Image src="/images/about_office_001.jpg" alt="" fill className="object-cover" />
-        </div>
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(30,64,175,0.5), rgba(30,64,175,0.3))' }} />
-        <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t.about.title}</h1>
-          <p className="text-xl text-white/80">{t.about.subtitle}</p>
+      <section className="relative py-24 md:py-32 overflow-hidden" style={{ background: 'linear-gradient(135deg, #1E40AF 0%, #1E3A8A 50%, #1E40AF 100%)' }}>
+        {/* Geometric decorations */}
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10" style={{ background: 'rgba(255,255,255,0.1)', transform: 'translate(30%, -30%)' }} />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-5" style={{ background: 'rgba(255,255,255,0.15)', transform: 'translate(-40%, 40%)' }} />
+        <div className="absolute top-1/2 left-1/4 w-px h-32 opacity-20" style={{ background: 'linear-gradient(to bottom, transparent, #fff, transparent)' }} />
+        <div className="absolute top-1/3 right-1/4 w-32 h-px opacity-20" style={{ background: 'linear-gradient(to right, transparent, #fff, transparent)' }} />
+
+        <div className="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                商业地产全流程<br />数字化运营商
+              </h1>
+              <p className="text-lg text-white/80 mb-8">
+                宗靖商管致力于通过数字化技术创新，为商业地产运营商和品牌方搭建高效、透明的对接平台
+              </p>
+            </div>
+            {/* Right image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image src="/images/about_team_v2_001.jpg" alt="Team" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </section>
 
