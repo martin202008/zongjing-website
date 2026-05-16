@@ -55,6 +55,11 @@ export default function AboutPage() {
                   ? '公司团队拥有丰富的商业地产运营经验和强大的技术研发能力，已成功运营多个大型商业项目。'
                   : 'Our team has extensive experience in commercial real estate operations and strong technological R&D capabilities, having successfully operated multiple large commercial projects.'}
               </p>
+              <p className="text-lg leading-relaxed mb-6" style={{ color: '#475569' }}>
+                {isZh
+                  ? '公司依托三大数字化产品系统——宗靖招赢系统（智能化招商管理）、宗靖智能营销系统（数字化营销解决方案）、宗靖智能运维系统（智慧物业管理）——为商业地产运营提供全流程数字化支持。'
+                  : 'With our three digital product systems, we provide full-process digital support for commercial real estate operations.'}
+              </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-cta" />
