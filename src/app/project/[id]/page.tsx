@@ -384,3 +384,11 @@ export default function ProjectDetailPage() {
     </div>
   </div>
 </section>
+
+      {/* Footer */}
+      <footer className="py-8 text-center text-sm" style={{ color: '#64748B', background: '#F1F5F9' }}>
+        <p>© 2024 宗靖商管. 保留所有权利.</p>
+      </footer>
+    </div>
+  )
+}
