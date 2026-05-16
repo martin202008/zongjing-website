@@ -3,7 +3,7 @@
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MapPin, ArrowLeft, CheckCircle, Phone, Clock, AreaChart, Users, Store } from 'lucide-react'
+import { MapPin, ArrowLeft, CheckCircle, Phone, Clock, AreaChart, Users, Store, ArrowRight } from 'lucide-react'
 
 const projects = [
   {
@@ -355,10 +355,8 @@ export default function ProjectDetailPage() {
   </div>
 </section>
 
-{/* CTA */}
-<div
-  className="max-w-6xl mx-auto px-6 pb-16"
->
+{/* CTA Section */}
+<section className="py-16 max-w-6xl mx-auto px-6">
   <div
     className="rounded-3xl p-8 md:p-12 text-center"
     style={{ background: 'linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%)' }}
@@ -376,6 +374,13 @@ export default function ProjectDetailPage() {
         <Phone className="w-5 h-5" />
         立即咨询：0512-66188818
       </a>
+      <Link
+        href="/system"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm border-2 border-white/30 text-white hover:bg-white/10 transition-all"
+      >
+        进入招赢系统
+        <ArrowRight className="w-4 h-4" />
+      </Link>
     </div>
   </div>
-</div>
+</section>
