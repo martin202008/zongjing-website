@@ -287,97 +287,95 @@ export default function ProjectDetailPage() {
         </div>
       </section>
 
-      {/* Content Area */}
-      <div className="max-w-6xl mx-auto px-6 -mt-8 relative z-10">
-        {/* Quick Info Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="bg-white rounded-2xl p-5 shadow-md border" style={{ borderColor: '#E2E8F0' }}>
-            <div className="flex items-center gap-2 mb-2">
-              <AreaChart className="w-4 h-4" style={{ color: '#1E40AF' }} />
-              <span className="text-xs" style={{ color: '#64748B' }}>商业面积</span>
-            </div>
-            <p className="text-xl font-bold" style={{ color: '#0F172A' }}>{project.totalArea.toLocaleString()}㎡</p>
-          </div>
-          <div className="bg-white rounded-2xl p-5 shadow-md border" style={{ borderColor: '#E2E8F0' }}>
-            <div className="flex items-center gap-2 mb-2">
-              <MapPin className="w-4 h-4" style={{ color: '#1E40AF' }} />
-              <span className="text-xs" style={{ color: '#64748B' }}>项目位置</span>
-            </div>
-            <p className="text-sm font-semibold truncate" style={{ color: '#0F172A' }}>{project.position}</p>
-          </div>
-          <div className="bg-white rounded-2xl p-5 shadow-md border" style={{ borderColor: '#E2E8F0' }}>
-            <div className="flex items-center gap-2 mb-2">
-              <Clock className="w-4 h-4" style={{ color: '#1E40AF' }} />
-              <span className="text-xs" style={{ color: '#64748B' }}>开业状态</span>
-            </div>
-            <p className="text-sm font-semibold" style={{ color: '#0F172A' }}>{project.opening}</p>
-          </div>
-          <div className="bg-white rounded-2xl p-5 shadow-md border" style={{ borderColor: '#E2E8F0' }}>
-            <div className="flex items-center gap-2 mb-2">
-              <CheckCircle className="w-4 h-4" style={{ color: '#1E40AF' }} />
-              <span className="text-xs" style={{ color: '#64748B' }}>业态规划</span>
-            </div>
-            <p className="text-sm font-semibold" style={{ color: '#0F172A' }}>{project.floors}</p>
-          </div>
-        </div>
+      {/* Project Details */}
+<section className="py-12 max-w-6xl mx-auto px-6">
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {/* Description */}
-          <div className="lg:col-span-2 bg-white rounded-2xl p-6 md:p-8 shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
-            <h2 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>项目简介</h2>
-            <div className="w-12 h-0.5 mb-6" style={{ background: '#1E40AF' }}></div>
-            <p className="leading-relaxed text-base" style={{ color: '#475569' }}>{project.description}</p>
-          </div>
+    {/* Description Card */}
+    <div className="bg-white rounded-2xl p-6 shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
+      <h2 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>项目简介</h2>
+      <div className="w-12 h-0.5 mb-6" style={{ background: '#1E40AF' }}></div>
+      <p className="leading-relaxed text-base" style={{ color: '#475569' }}>{project.description}</p>
 
-          {/* Features */}
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
-            <h2 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>项目特色</h2>
-            <div className="w-12 h-0.5 mb-6" style={{ background: '#1E40AF' }}></div>
-            <div className="flex flex-wrap gap-3">
-              {project.features.map((f, i) => (
-                <span key={i} className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium" style={{ backgroundColor: '#EEF2FF', color: '#1E40AF' }}>
-                  <CheckCircle className="w-4 h-4" />
-                  {f}
-                </span>
-              ))}
-            </div>
-
-            {/* Tags */}
-            <div className="mt-6 pt-6" style={{ borderTop: '1px solid #E2E8F0' }}>
-              <h3 className="text-sm font-semibold mb-3" style={{ color: '#0F172A' }}>标签</h3>
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => (
-                  <span key={i} className="inline-block text-xs px-3 py-1 rounded-full" style={{ backgroundColor: '#F8FAFC', color: '#64748B' }}>
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div
-          className="rounded-3xl p-8 md:p-12 text-center mb-12"
-          style={{ background: 'linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%)' }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">对 {project.name} 感兴趣？</h3>
-          <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
-            欢迎致电咨询，专业团队将为您提供详细的招商信息
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="tel:0512-66188818"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg text-white transition-all hover:opacity-90 shadow-lg"
-              style={{ background: '#F97316' }}
-            >
-              <Phone className="w-5 h-5" />
-              立即咨询：0512-66188818
-            </a>
-          </div>
+      {/* Features Tags */}
+      <div className="mt-6 pt-6" style={{ borderTop: '1px solid #E2E8F0' }}>
+        <h3 className="text-sm font-semibold mb-3" style={{ color: '#0F172A' }}>项目特色</h3>
+        <div className="flex flex-wrap gap-2">
+          {project.features.map((f, i) => (
+            <span key={i} className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-sm font-medium" style={{ backgroundColor: '#EEF2FF', color: '#1E40AF' }}>
+              <CheckCircle className="w-3 h-3" />
+              {f}
+            </span>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+
+    {/* Info Card */}
+    <div className="bg-white rounded-2xl p-6 shadow-sm border" style={{ borderColor: '#E2E8F0' }}>
+      <h2 className="text-xl font-bold mb-4" style={{ color: '#0F172A' }}>基本信息</h2>
+      <div className="w-12 h-0.5 mb-6" style={{ background: '#1E40AF' }}></div>
+      <div className="space-y-4">
+        <div className="flex items-center justify-between py-3" style={{ borderBottom: '1px solid #F1F5F9' }}>
+          <span style={{ color: '#64748B' }}>商业面积</span>
+          <span className="font-semibold" style={{ color: '#0F172A' }}>{project.totalArea.toLocaleString()}㎡</span>
+        </div>
+        <div className="flex items-center justify-between py-3" style={{ borderBottom: '1px solid #F1F5F9' }}>
+          <span style={{ color: '#64748B' }}>项目位置</span>
+          <span className="font-semibold" style={{ color: '#0F172A' }}>{project.position}</span>
+        </div>
+        <div className="flex items-center justify-between py-3" style={{ borderBottom: '1px solid #F1F5F9' }}>
+          <span style={{ color: '#64748B' }}>楼层规划</span>
+          <span className="font-semibold" style={{ color: '#0F172A' }}>{project.floors}</span>
+        </div>
+        <div className="flex items-center justify-between py-3">
+          <span style={{ color: '#64748B' }}>开业状态</span>
+          <span className="font-semibold" style={{ color: '#0F172A' }}>{project.opening}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{/* Image Gallery */}
+<section className="py-12 max-w-6xl mx-auto px-6">
+  <h2 className="text-2xl font-bold mb-8" style={{ color: '#0F172A' }}>项目图片</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {project.images.map((img, i) => (
+      <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+        <Image
+          src={img}
+          alt={`${project.name} ${i + 1}`}
+          fill
+          className="object-cover hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
+{/* CTA */}
+<div
+  className="max-w-6xl mx-auto px-6 pb-16"
+>
+  <div
+    className="rounded-3xl p-8 md:p-12 text-center"
+    style={{ background: 'linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%)' }}
+  >
+    <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">对 {project.name} 感兴趣？</h3>
+    <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
+      欢迎致电咨询，专业团队将为您提供详细的招商信息
+    </p>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="tel:0512-66188818"
+        className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-lg text-white transition-all hover:opacity-90 shadow-lg"
+        style={{ background: '#F97316' }}
+      >
+        <Phone className="w-5 h-5" />
+        立即咨询：0512-66188818
+      </a>
+    </div>
+  </div>
+</div>
