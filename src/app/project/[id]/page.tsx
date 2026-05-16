@@ -164,7 +164,7 @@ export default function ProjectDetailPage() {
   return (
     <div className="min-h-screen" style={{ background: '#F8FAFC' }}>
       {/* Hero Image */}
-      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
         <Image
           src={project.image}
           alt={project.name}
@@ -190,9 +190,15 @@ export default function ProjectDetailPage() {
               {project.businessType}
             </span>
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-3 tracking-tight">{project.name}</h1>
-            <div className="flex items-center gap-2 text-white/80">
-              <MapPin className="w-5 h-5" style={{ color: '#F97316' }} />
-              <span>{project.city} · {project.address}</span>
+            <div className="flex items-center gap-4 text-white/90 text-sm">
+              <div className="flex items-center gap-1">
+                <MapPin className="w-4 h-4" style={{ color: '#F97316' }} />
+                <span>{project.city} · {project.address}</span>
+              </div>
+              <span>•</span>
+              <span>{project.totalArea.toLocaleString()}㎡</span>
+              <span>•</span>
+              <span>{project.opening}</span>
             </div>
           </div>
         </div>
